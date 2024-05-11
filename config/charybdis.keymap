@@ -69,7 +69,7 @@
         to_dd: to_deadstate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 8>, <&macro_press>;
+            bindings = <&to 7>, <&macro_press>;
 
             label = "TO_DEADSTATE";
         };
@@ -89,6 +89,13 @@
 
             label = "GRAVE_0";
         };
+
+        d_conon_equal_l0: d_conon_equal_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Q) &kp N6 &to 0>;
+            label = "D_CONON_EQUAL_L0";
+        };
     };
 
     keymap {
@@ -107,18 +114,18 @@
 
         layer_1 {
             bindings = <
-&kp ESC  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-&none    &none            &none         &none           &none       &none          &none      &kp MINUS       &kp EQUAL     &kp LBKT              &kp RBKT               &kp PIPE
-&none    &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT   &none          &none      &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-&none    &none            &none         &none           &none       &none          &none      &none           &none         &none                 &mkp LCLK              &mkp RCLK
-                                        &none           &none       &trans         &none      &trans
-                                                        &none       &none          &trans
+&kp LG(GRAVE)  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+&none          &none            &none         &none           &none       &none          &none      &kp MINUS       &kp EQUAL     &kp LBKT              &kp RBKT               &kp PIPE
+&none          &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT   &none          &none      &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+&none          &none            &none         &none           &none       &none          &none      &none           &none         &none                 &mkp LCLK              &mkp RCLK
+                                              &none           &none       &trans         &none      &trans
+                                                              &none       &none          &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&kp F12     &kp F1    &kp F2        &kp F3          &kp F4           &kp F5    &kp F6  &kp F7           &kp F8             &kp F9        &kp F10        &kp F11
+&kp F11     &kp F1    &kp F2        &kp F3          &kp F4           &kp F5    &kp F6  &kp F7           &kp F8             &kp F9        &kp F10        &kp F12
 &kp C_NEXT  &none     &none         &kp KP_MINUS    &kp KP_PLUS      &none     &none   &none            &none              &none         &none          &kp C_VOL_UP
 &kp C_PLAY  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none     &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp K_MUTE
 &kp C_PREV  &none     &none         &none           &none            &none     &none   &none            &none              &none         &none          &kp C_VOL_DN
@@ -171,6 +178,17 @@
             >;
         };
 
+        Dvorak_DeadState {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans     &trans  &trans        &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &d_grave_l0        &trans     &trans  &d_dollar_l0  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N1             &kp LS(Z)  &trans  &trans        &d_conon_equal_l0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &trans     &trans  &trans        &trans             &trans
+                        &trans  &trans  &trans    &trans             &trans
+                                &trans  &mo 4     &trans
+            >;
+        };
+
         Normal_DeadState {
             bindings = <
 &trans  &trans  &trans     &trans  &trans  &trans    &trans    &trans  &trans  &trans     &trans  &trans
@@ -182,25 +200,14 @@
             >;
         };
 
-        Dvorak_DeadState {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans     &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &d_grave_l0        &trans     &trans  &d_dollar_l0  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N1             &kp LS(Z)  &trans  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &trans     &trans  &trans        &trans  &trans
-                        &trans  &trans  &trans    &trans             &trans
-                                &trans  &trans    &trans
-            >;
-        };
-
         DeadStatePreview {
             bindings = <
-&kp DOLLAR  &kp AMPS  &kp N7     &kp N5  &kp N3  &kp N1    &kp N9     &kp N0   &kp N2  &kp N4      &kp N6  &kp N8
-&kp TAB     &trans    &kp TILDE  &trans  &trans  &trans    &kp GRAVE  &trans   &trans  &kp DOLLAR  &trans  &trans
-&trans      &trans    &trans     &trans  &trans  &trans    &kp AMPS   &trans   &trans  &trans      &trans  &trans
-&trans      &trans    &trans     &trans  &trans  &trans    &kp PIPE   &kp SQT  &trans  &trans      &trans  &trans
-                                 &trans  &trans  &trans    &trans     &trans
-                                         &trans  &trans    &trans
+&kp DOLLAR  &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6  &kp N8
+&kp TAB     &trans    &kp TILDE  &trans  &trans       &trans    &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &trans  &trans
+&trans      &trans    &trans     &trans  &kp PERCENT  &trans    &kp AMPS   &kp DOUBLE_QUOTES  &trans     &trans      &trans  &trans
+&trans      &trans    &trans     &trans  &trans       &trans    &kp PIPE   &kp SQT            &trans     &trans      &trans  &trans
+                                 &trans  &kp COMMA    &trans    &trans     &trans
+                                         &trans       &trans    &trans
             >;
         };
     };
@@ -209,8 +216,8 @@
         compatible = "zmk,conditional-layers";
 
         dvorak_deadstate {
-            if-layers = <8>;
-            then-layer = <8>;
+            if-layers = <7>;
+            then-layer = <7>;
         };
     };
 };
