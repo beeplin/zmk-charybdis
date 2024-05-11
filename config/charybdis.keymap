@@ -66,12 +66,28 @@
             label = "GRAVE_L0";
         };
 
-        to_deadstate: to_deadstate {
+        to_dd: to_deadstate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 7>, <&macro_press>, <&to 8>, <&macro_tap>;
 
             label = "TO_DEADSTATE";
+        };
+
+        dollar_0: n_dollar_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR &to 0>, <&macro_press>;
+
+            label = "N_DOLLAR_0";
+        };
+
+        grave_0: grave_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &to 0>, <&macro_press>;
+
+            label = "GRAVE_0";
         };
     };
 
@@ -82,7 +98,7 @@
             bindings = <
 &kp ESC         &kp N1          &kp N2          &kp N3       &kp N4            &kp N5    &kp N6     &kp N7         &kp N8               &kp N9          &kp N0              &kp MINUS
 &kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T     &kp Y      &kp U          &kp I                &kp O           &kp P               &kp LEFT_BRACKET
-&to 7           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
+&to_dd          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z         &lt 5 X         &kp C        &kp V             &kp B     &kp N      &kp M          &kp COMMA            &kp PERIOD      &lt 3 SLASH         &kp RSHFT
                                                 &kp LGUI     &kp SPACE         &mo 4     &kp ENTER  &kp BACKSPACE
                                                              &kp LEFT_ALT      &mo 1     &mo 2
@@ -144,14 +160,14 @@
             >;
         };
 
-        to_base {
+        TransBackTo0 {
             bindings = <
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-                     &to 0  &to 0  &to 0    &to 0  &to 0
-                            &to 0  &to 0    &to 0
+&to 0  &to 0  &to 0  &to 0  &kp Q  &kp Q    &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q
+&kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q    &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q
+&kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q    &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q
+&kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q    &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q
+                     &kp Q  &kp Q  &kp Q    &kp Q  &kp Q
+                            &kp Q  &kp Q    &kp Q
             >;
         };
 
@@ -168,12 +184,23 @@
 
         Normal_DeadState {
             bindings = <
-&trans  &trans  &trans     &trans  &trans  &trans    &trans     &trans  &trans  &trans      &trans  &trans
-&trans  &trans  &kp TILDE  &trans  &trans  &trans    &kp GRAVE  &trans  &trans  &kp DOLLAR  &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans    &kp AMPS   &trans  &trans  &trans      &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans    &kp PIPE   &trans  &trans  &trans      &trans  &trans
-                           &trans  &trans  &trans    &trans     &trans
+&trans  &trans  &trans     &trans  &trans  &trans    &trans    &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &kp TILDE  &trans  &trans  &trans    &grave_0  &trans  &trans  &dollar_0  &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans    &kp AMPS  &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &trans     &trans  &trans  &trans    &kp PIPE  &trans  &trans  &trans     &trans  &trans
+                           &trans  &trans  &trans    &trans    &trans
                                    &trans  &trans    &trans
+            >;
+        };
+
+        DeadStatePreview {
+            bindings = <
+&kp DOLLAR  &kp AMPS  &kp N7     &kp N5  &kp N3  &kp N1    &kp N9     &kp N0   &kp N2  &kp N4      &kp N6  &kp N8
+&kp TAB     &trans    &kp TILDE  &trans  &trans  &trans    &kp GRAVE  &trans   &trans  &kp DOLLAR  &trans  &trans
+&trans      &trans    &trans     &trans  &trans  &trans    &kp AMPS   &trans   &trans  &trans      &trans  &trans
+&trans      &trans    &trans     &trans  &trans  &trans    &kp PIPE   &kp SQT  &trans  &trans      &trans  &trans
+                                 &trans  &trans  &trans    &trans     &trans
+                                         &trans  &trans    &trans
             >;
         };
     };
@@ -183,7 +210,7 @@
 
         dvorak_deadstate {
             if-layers = <7>;
-            then-layer = <6>;
+            then-layer = <7>;
         };
     };
 };
