@@ -57,6 +57,22 @@
 
             label = "QUICKER";
         };
+
+        dollar_l0: dollar_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR &to 0>, <&macro_press>;
+
+            label = "DOLLAR_L0";
+        };
+
+        grave_l0: grave_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &to 0>, <&macro_press>;
+
+            label = "GRAVE_L0";
+        };
     };
 
     keymap {
@@ -128,17 +144,15 @@
             >;
         };
 
-        layer_6 {
+        DeadState {
             bindings = <
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp GRAVE  &kp DOLLAR  &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
-               &kp  &kp  &kp    &kp  &kp
-                    &kp  &kp    &kp
+&kp    &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
+&kp    &kp  &kp  &kp  &kp  &kp    &kp  &kp  &grave_l0  &dollar_l0  &kp  &kp
+&to 0  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
+&kp    &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp        &kp         &kp  &kp
+                 &kp  &kp  &kp    &kp  &kp
+                      &kp  &kp    &kp
             >;
-
-            label = "Dead State";
         };
     };
 };
