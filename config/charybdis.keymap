@@ -69,7 +69,7 @@
         to_dd: to_deadstate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 7>, <&macro_press>;
+            bindings = <&macro_press>, <&to 7>, <&macro_tap>, <&to 8>;
 
             label = "TO_DEADSTATE";
         };
@@ -184,8 +184,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &d_grave_l0        &trans     &trans  &d_dollar_l0  &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp N1             &kp LS(Z)  &trans  &trans        &d_conon_equal_l0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &trans     &trans  &trans        &trans             &trans
-                        &trans  &trans  &trans    &trans             &trans
-                                &trans  &mo 4     &trans
+                        &trans  &trans  &mo 4     &trans             &trans
+                                &trans  &trans    &trans
             >;
         };
 
