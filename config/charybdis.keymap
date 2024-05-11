@@ -186,7 +186,7 @@
 
         dvorak_deadstate {
             if-layers = <6>;
-            then-layer = <10>;
+            then-layer = <9>;
         };
     };
 };
