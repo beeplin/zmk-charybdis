@@ -65,6 +65,14 @@
 
             label = "GRAVE_L0";
         };
+
+        to_deadstate: to_deadstate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 7>, <&macro_press>, <&to 8>, <&macro_tap>;
+
+            label = "TO_DEADSTATE";
+        };
     };
 
     keymap {
