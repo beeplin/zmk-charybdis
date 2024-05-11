@@ -74,7 +74,7 @@
             bindings = <
 &kp ESC         &kp N1          &kp N2          &kp N3       &kp N4            &kp N5    &kp N6     &kp N7         &kp N8               &kp N9          &kp N0              &kp MINUS
 &kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T     &kp Y      &kp U          &kp I                &kp O           &kp P               &kp LEFT_BRACKET
-&to 6           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
+&to 7           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z         &lt 5 X         &kp C        &kp V             &kp B     &kp N      &kp M          &kp COMMA            &kp PERIOD      &lt 3 SLASH         &kp RSHFT
                                                 &kp LGUI     &kp SPACE         &mo 4     &kp ENTER  &kp BACKSPACE
                                                              &kp LEFT_ALT      &mo 1     &mo 2
@@ -110,7 +110,7 @@
 &none  &none  &none  &none      &none      &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
 &none  &none  &none  &none      &none      &none          &none         &none         &none         &none  &none  &none
                      &mkp RCLK  &mkp LCLK  &mkp MCLK      &none         &none
-                                &none      &none          &none
+                                &none      &mkp LCLK      &none
             >;
         };
 
@@ -136,15 +136,46 @@
             >;
         };
 
-        DeadState {
+        dvorak_mode {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
-&none  &none  &none  &none  &none  &none    &d_grave_l0  &none  &none  &d_dollar_l0  &none  &none
-&to 0  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
-&none  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
-                     &none  &none  &none    &none        &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none
                             &none  &none    &none
             >;
+        };
+
+        Dvorak_DeadState {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PLUS           &trans     &trans  &kp GRAVE  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans    &kp N1             &kp LS(Z)  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &trans     &trans  &trans     &trans  &trans
+                        &trans  &tog 0  &trans    &trans             &trans
+                                &trans  &trans    &trans
+            >;
+        };
+
+        to_base {
+            bindings = <
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+                     &to 0  &to 0  &to 0    &to 0  &to 0
+                            &to 0  &to 0    &to 0
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        dvorak_deadstate {
+            if-layers = <6>;
+            then-layer = <7>;
         };
     };
 };
