@@ -50,26 +50,18 @@
     };
 
     macros {
-        quicker: quicker {
+        d_dollar_l0: dollar_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LCTRL>, <&macro_press>;
-
-            label = "QUICKER";
-        };
-
-        dollar_l0: dollar_l0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOLLAR &to 0>, <&macro_press>;
+            bindings = <&kp GRAVE &to 0>, <&macro_press>;
 
             label = "DOLLAR_L0";
         };
 
-        grave_l0: grave_l0 {
+        d_grave_l0: grave_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &to 0>, <&macro_press>;
+            bindings = <&kp PLUS &to 0>, <&macro_press>;
 
             label = "GRAVE_L0";
         };
@@ -146,11 +138,11 @@
 
         DeadState {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none      &none       &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &grave_l0  &dollar_l0  &none  &none
-&to 0  &none  &none  &none  &none  &none    &none  &none  &none      &none       &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none      &none       &none  &none
-                     &none  &none  &none    &none  &none
+&none  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
+&none  &none  &none  &none  &none  &none    &d_grave_l0  &none  &none  &d_dollar_l0  &none  &none
+&to 0  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
+&none  &none  &none  &none  &none  &none    &none        &none  &none  &none         &none  &none
+                     &none  &none  &none    &none        &none
                             &none  &none    &none
             >;
         };
