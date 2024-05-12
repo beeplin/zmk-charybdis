@@ -69,7 +69,8 @@
         to_dd: to_deadstate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&to 7>, <&macro_tap>, <&to 8>;
+            bindings = <&macro_press> &to 7>
+                     , <&macro_tap &to 8>;
 
             label = "TO_DEADSTATE";
         };
