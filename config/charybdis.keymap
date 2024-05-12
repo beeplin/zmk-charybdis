@@ -144,6 +144,48 @@
             bindings = <&kp SPACE &to 0>;
             label = "N_SPACE_L0";
         };
+
+        n_caret_l0: n_caret_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &to 0>;
+            label = "N_CARET_L0";
+        };
+
+        d_caret_l0: d_caret_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RBKT) &to 0>;
+            label = "D_CARET_L0";
+        };
+
+        n_colon_l0: n_colon_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &to 0>;
+            label = "N_COLON_L0";
+        };
+
+        d_colon_l0: d_colon_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Q) &to 0>;
+            label = "D_COLON_L0";
+        };
+
+        n_percent_l0: n_percent_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERCENT &to 0>;
+            label = "N_PERCENT_L0";
+        };
+
+        d_percent_l0: d_percent_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N1) &to 0>;
+            label = "D_PERCENT_L0";
+        };
     };
 
     keymap {
@@ -217,23 +259,23 @@
 
         Dvorak_DeadState {
             bindings = <
-&to 0  &none  &none        &none  &none        &none    &none        &none      &none  &none         &none              &none
-&none  &none  &n_tilde_l0  &none  &none        &none    &d_grave_l0  &none      &none  &d_dollar_l0  &to 0              &n_backslash_l0
-&to 0  &none  &none        &none  &none        &none    &d_amps_l0   &d_dqt_l0  &none  &none         &d_conon_equal_l0  &none
-&none  &none  &none        &none  &none        &none    &n_pipe_l0   &none      &none  &none         &none              &none
-                           &mo 4  &n_space_l0  &to 7    &to 0        &to 0
-                                  &none        &none    &to 0
+&to 0  &none  &none        &none  &none          &none    &none        &none        &none        &none         &none              &none
+&none  &none  &n_tilde_l0  &none  &none          &none    &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &to 0              &n_backslash_l0
+&to 0  &none  &none        &none  &d_percent_l0  &none    &d_amps_l0   &d_dqt_l0    &none        &none         &d_conon_equal_l0  &none
+&none  &none  &none        &none  &none          &none    &n_pipe_l0   &none        &none        &none         &none              &none
+                           &mo 4  &n_space_l0    &to 7    &to 0        &to 0
+                                  &none          &none    &to 0
             >;
         };
 
         Normal_DeadState {
             bindings = <
-&to 0  &to 0  &to 0        &to 0  &none        &none    &none       &none      &none  &none        &none  &none
-&none  &none  &n_tilde_l0  &none  &none        &none    &n_grave_0  &none      &none  &n_dollar_0  &to 0  &n_backslash_l0
-&none  &none  &none        &none  &none        &none    &n_amps_l0  &n_dqt_l0  &none  &none        &none  &none
-&none  &none  &none        &none  &none        &none    &n_pipe_l0  &none      &none  &none        &none  &none
-                           &mo 4  &n_space_l0  &to 0    &to 0       &none
-                                  &to 0        &none    &none
+&to 0  &to 0  &to 0        &to 0  &none          &none    &none       &none        &none        &none        &none  &none
+&none  &none  &n_tilde_l0  &none  &none          &none    &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &to 0  &n_backslash_l0
+&none  &none  &none        &none  &n_percent_l0  &none    &n_amps_l0  &n_dqt_l0    &none        &none        &none  &none
+&none  &none  &none        &none  &none          &none    &n_pipe_l0  &none        &none        &none        &none  &none
+                           &mo 4  &n_space_l0    &to 0    &to 0       &none
+                                  &to 0          &none    &none
             >;
         };
 
