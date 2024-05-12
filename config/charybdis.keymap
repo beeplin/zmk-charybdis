@@ -214,7 +214,7 @@
 
         Dvorak_DeadState {
             bindings = <
-&trans  &trans  &trans       &trans  &trans  &trans    &trans       &trans     &trans  &trans        &trans             &trans
+&to 0   &trans  &trans       &trans  &trans  &trans    &trans       &trans     &trans  &trans        &trans             &trans
 &trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &d_grave_l0  &trans     &trans  &d_dollar_l0  &trans             &trans
 &trans  &trans  &trans       &trans  &trans  &trans    &d_amps_l0   &d_dqt_l0  &trans  &trans        &d_conon_equal_l0  &trans
 &trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0   &trans     &trans  &trans        &trans             &trans
@@ -225,7 +225,7 @@
 
         Normal_DeadState {
             bindings = <
-&trans  &trans  &trans       &trans  &trans  &trans    &trans      &trans     &trans  &trans       &trans  &trans
+&to 0   &trans  &trans       &trans  &trans  &trans    &trans      &trans     &trans  &trans       &trans  &trans
 &trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &n_grave_0  &trans     &trans  &n_dollar_0  &trans  &trans
 &trans  &trans  &trans       &trans  &trans  &trans    &n_amps_l0  &n_dqt_l0  &trans  &trans       &trans  &trans
 &trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0  &trans     &trans  &trans       &trans  &trans
@@ -236,12 +236,12 @@
 
         DeadStatePreview {
             bindings = <
-&kp DOLLAR  &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6  &kp N8
-&kp TAB     &trans    &kp TILDE  &trans  &trans       &trans    &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &trans  &trans
-&trans      &trans    &trans     &trans  &kp PERCENT  &trans    &kp AMPS   &kp DOUBLE_QUOTES  &trans     &trans      &trans  &trans
-&trans      &trans    &trans     &trans  &trans       &trans    &kp PIPE   &kp SQT            &trans     &trans      &trans  &trans
-                                 &trans  &kp COMMA    &trans    &trans     &trans
-                                         &trans       &trans    &trans
+&to 0    &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6  &kp N8
+&kp TAB  &trans    &kp TILDE  &trans  &trans       &trans    &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &trans  &trans
+&trans   &trans    &trans     &trans  &kp PERCENT  &trans    &kp AMPS   &kp DOUBLE_QUOTES  &trans     &trans      &trans  &trans
+&trans   &trans    &trans     &trans  &trans       &trans    &kp PIPE   &kp SQT            &trans     &trans      &trans  &trans
+                              &trans  &kp COMMA    &trans    &trans     &trans
+                                      &trans       &trans    &trans
             >;
         };
     };
