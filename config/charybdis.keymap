@@ -130,6 +130,13 @@
             bindings = <&kp LS(SQT) &to 0>;
             label = "N_DOUBLE_QUOTES_L0";
         };
+
+        n_backslash_l0: n_backslash_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &to 0>;
+            label = "N_BACKSLASH_L0";
+        };
     };
 
     keymap {
@@ -170,10 +177,10 @@
 
         Mouse {
             bindings = <
-&none  &none  &none  &none      &none      &none          &none         &none         &none         &none  &none  &none
-&none  &none  &none  &none      &none      &bootloader    &bootloader   &bt BT_CLR    &none         &none  &none  &none
-&none  &none  &none  &none      &none      &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
-&none  &none  &none  &none      &none      &none          &none         &none         &none         &none  &none  &none
+&none  &none  &none  &none      &none      &none          &none         &none         &none         &none         &none         &none
+&none  &none  &none  &none      &none      &bootloader    &bootloader   &bt BT_CLR    &none         &none         &none         &none
+&none  &none  &none  &none      &none      &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none  &none  &none      &none      &none          &none         &none         &none         &none         &none         &none
                      &mkp RCLK  &mkp LCLK  &mkp MCLK      &none         &none
                                 &none      &mkp LCLK      &none
             >;
@@ -204,7 +211,7 @@
         Dvorak_DeadState {
             bindings = <
 &to 0  &none  &none        &none  &none  &none    &none        &none      &none  &none         &none              &none
-&none  &none  &n_tilde_l0  &none  &none  &none    &d_grave_l0  &none      &none  &d_dollar_l0  &none              &none
+&none  &none  &n_tilde_l0  &none  &none  &none    &d_grave_l0  &none      &none  &d_dollar_l0  &none              &n_backslash_l0
 &none  &none  &none        &none  &none  &none    &d_amps_l0   &d_dqt_l0  &none  &none         &d_conon_equal_l0  &none
 &none  &none  &none        &none  &none  &none    &n_pipe_l0   &none      &none  &none         &none              &none
                            &mo 4  &none  &to 7    &none        &none
@@ -215,7 +222,7 @@
         Normal_DeadState {
             bindings = <
 &to 0  &none  &none        &none  &none  &none    &none       &none      &none  &none        &none  &none
-&none  &none  &n_tilde_l0  &none  &none  &none    &n_grave_0  &none      &none  &n_dollar_0  &none  &none
+&none  &none  &n_tilde_l0  &none  &none  &none    &n_grave_0  &none      &none  &n_dollar_0  &none  &n_backslash_l0
 &none  &none  &none        &none  &none  &none    &n_amps_l0  &n_dqt_l0  &none  &none        &none  &none
 &none  &none  &none        &none  &none  &none    &n_pipe_l0  &none      &none  &none        &none  &none
                            &mo 4  &none  &to 0    &none       &none
@@ -226,7 +233,7 @@
         DeadStatePreview {
             bindings = <
 &to 0    &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6  &kp N8
-&kp TAB  &none     &kp TILDE  &none   &none        &none     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &none   &none
+&kp TAB  &none     &kp TILDE  &none   &none        &none     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &none   &kp BACKSLASH
 &none    &none     &none      &none   &kp PERCENT  &none     &kp AMPS   &kp DOUBLE_QUOTES  &none      &none       &none   &none
 &none    &none     &none      &none   &none        &none     &kp PIPE   &kp SQT            &none      &none       &none   &none
                               &none   &kp COMMA    &none     &none      &none
