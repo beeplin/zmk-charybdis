@@ -66,16 +66,7 @@
             label = "GRAVE_L0";
         };
 
-        to_dd: to_deadstate {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 7>
-                     , <&macro_tap &to 8>;
-
-            label = "TO_DEADSTATE";
-        };
-
-        dollar_0: n_dollar_0 {
+        n_dollar_0: n_dollar_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOLLAR &to 0>, <&macro_press>;
@@ -83,7 +74,7 @@
             label = "N_DOLLAR_0";
         };
 
-        grave_0: grave_0 {
+        n_grave_0: grave_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &to 0>, <&macro_press>;
@@ -97,6 +88,48 @@
             bindings = <&kp LS(Q) &kp N6 &to 0>;
             label = "D_CONON_EQUAL_L0";
         };
+
+        n_amps_l0: amps_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS &to 0>;
+            label = "AMPS_L0";
+        };
+
+        n_pipe_l0: pipe_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE &to 0>;
+            label = "PIPE_L0";
+        };
+
+        n_tilde_l0: n_tilde_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &to 0>;
+            label = "N_TILDE_L0";
+        };
+
+        d_amps_l0: d_amps_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &to 0>;
+            label = "D_AMPS_L0";
+        };
+
+        d_dqt_l0: d_double_quotes_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Z) &to 0>;
+            label = "D_DOUBLE_QUOTES_L0";
+        };
+
+        n_dqt_l0: n_double_quotes_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SQT) &to 0>;
+            label = "N_DOUBLE_QUOTES_L0";
+        };
     };
 
     keymap {
@@ -108,7 +141,7 @@
 &kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T     &kp Y      &kp U          &kp I                &kp O           &kp P               &kp LEFT_BRACKET
 &kp LCTRL       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z         &lt 5 X         &kp C        &kp V             &kp B     &kp N      &kp M          &kp COMMA            &kp PERIOD      &lt 3 SLASH         &kp RSHFT
-                                                &mo 4        &kp SPACE         &to_dd    &kp ENTER  &kp BACKSPACE
+                                                &mo 4        &kp SPACE         &to 7     &kp ENTER  &kp BACKSPACE
                                                              &kp LEFT_GUI      &mo 1     &mo 2
             >;
         };
@@ -181,23 +214,23 @@
 
         Dvorak_DeadState {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans     &trans  &trans        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &d_grave_l0        &trans     &trans  &d_dollar_l0  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N1             &kp LS(Z)  &trans  &trans        &d_conon_equal_l0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(BACKSLASH)  &trans     &trans  &trans        &trans             &trans
-                        &mo 4   &trans  &trans    &trans             &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &trans       &trans     &trans  &trans        &trans             &trans
+&trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &d_grave_l0  &trans     &trans  &d_dollar_l0  &trans             &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &d_amps_l0   &d_dqt_l0  &trans  &trans        &d_conon_equal_l0  &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0   &trans     &trans  &trans        &trans             &trans
+                             &mo 4   &trans  &to 8     &trans       &trans
+                                     &trans  &trans    &trans
             >;
         };
 
         Normal_DeadState {
             bindings = <
-&trans  &trans  &trans     &trans  &trans  &trans    &trans    &trans  &trans  &trans     &trans  &trans
-&trans  &trans  &kp TILDE  &trans  &trans  &trans    &grave_0  &trans  &trans  &dollar_0  &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans    &kp AMPS  &trans  &trans  &trans     &trans  &trans
-&trans  &trans  &trans     &trans  &trans  &trans    &kp PIPE  &trans  &trans  &trans     &trans  &trans
-                           &trans  &trans  &trans    &trans    &trans
-                                   &trans  &trans    &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &trans      &trans     &trans  &trans       &trans  &trans
+&trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &n_grave_0  &trans     &trans  &n_dollar_0  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &n_amps_l0  &n_dqt_l0  &trans  &trans       &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0  &trans     &trans  &trans       &trans  &trans
+                             &mo 4   &trans  &to 0     &trans      &trans
+                                     &trans  &trans    &trans
             >;
         };
 
