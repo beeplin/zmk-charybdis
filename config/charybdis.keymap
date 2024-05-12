@@ -141,7 +141,7 @@
 &kp TAB         &kp Q           &kp W           &kp E        &kp R             &kp T     &kp Y      &kp U          &kp I                &kp O           &kp P               &kp LEFT_BRACKET
 &kp LCTRL       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G     &kp H      &mt RSHIFT J   &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z         &lt 5 X         &kp C        &kp V             &kp B     &kp N      &kp M          &kp COMMA            &kp PERIOD      &lt 3 SLASH         &kp RSHFT
-                                                &mo 4        &kp SPACE         &to 7     &kp ENTER  &kp BACKSPACE
+                                                &mo 4        &kp SPACE         &to 6     &kp ENTER  &kp BACKSPACE
                                                              &kp LEFT_GUI      &mo 1     &mo 2
             >;
         };
@@ -201,57 +201,39 @@
             >;
         };
 
-        TransBackTo0 {
-            bindings = <
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-                     &to 0  &to 0  &to 0    &to 0  &to 0
-                            &to 0  &to 0    &to 0
-            >;
-        };
-
         Dvorak_DeadState {
             bindings = <
-&to 0   &trans  &trans       &trans  &trans  &trans    &trans       &trans     &trans  &trans        &trans             &trans
-&trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &d_grave_l0  &trans     &trans  &d_dollar_l0  &trans             &trans
-&trans  &trans  &trans       &trans  &trans  &trans    &d_amps_l0   &d_dqt_l0  &trans  &trans        &d_conon_equal_l0  &trans
-&trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0   &trans     &trans  &trans        &trans             &trans
-                             &mo 4   &trans  &to 8     &trans       &trans
-                                     &trans  &trans    &trans
+&to 0  &none  &none        &none  &none  &none    &none        &none      &none  &none         &none              &none
+&none  &none  &n_tilde_l0  &none  &none  &none    &d_grave_l0  &none      &none  &d_dollar_l0  &none              &none
+&none  &none  &none        &none  &none  &none    &d_amps_l0   &d_dqt_l0  &none  &none         &d_conon_equal_l0  &none
+&none  &none  &none        &none  &none  &none    &n_pipe_l0   &none      &none  &none         &none              &none
+                           &mo 4  &none  &to 7    &none        &none
+                                  &none  &none    &none
             >;
         };
 
         Normal_DeadState {
             bindings = <
-&to 0   &trans  &trans       &trans  &trans  &trans    &trans      &trans     &trans  &trans       &trans  &trans
-&trans  &trans  &n_tilde_l0  &trans  &trans  &trans    &n_grave_0  &trans     &trans  &n_dollar_0  &trans  &trans
-&trans  &trans  &trans       &trans  &trans  &trans    &n_amps_l0  &n_dqt_l0  &trans  &trans       &trans  &trans
-&trans  &trans  &trans       &trans  &trans  &trans    &n_pipe_l0  &trans     &trans  &trans       &trans  &trans
-                             &mo 4   &trans  &to 0     &trans      &trans
-                                     &trans  &trans    &trans
+&to 0  &none  &none        &none  &none  &none    &none       &none      &none  &none        &none  &none
+&none  &none  &n_tilde_l0  &none  &none  &none    &n_grave_0  &none      &none  &n_dollar_0  &none  &none
+&none  &none  &none        &none  &none  &none    &n_amps_l0  &n_dqt_l0  &none  &none        &none  &none
+&none  &none  &none        &none  &none  &none    &n_pipe_l0  &none      &none  &none        &none  &none
+                           &mo 4  &none  &to 0    &none       &none
+                                  &none  &none    &none
             >;
         };
 
         DeadStatePreview {
             bindings = <
 &to 0    &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6  &kp N8
-&kp TAB  &trans    &kp TILDE  &trans  &trans       &trans    &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &trans  &trans
-&trans   &trans    &trans     &trans  &kp PERCENT  &trans    &kp AMPS   &kp DOUBLE_QUOTES  &trans     &trans      &trans  &trans
-&trans   &trans    &trans     &trans  &trans       &trans    &kp PIPE   &kp SQT            &trans     &trans      &trans  &trans
-                              &trans  &kp COMMA    &trans    &trans     &trans
-                                      &trans       &trans    &trans
+&kp TAB  &none     &kp TILDE  &none   &none        &none     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &none   &none
+&none    &none     &none      &none   &kp PERCENT  &none     &kp AMPS   &kp DOUBLE_QUOTES  &none      &none       &none   &none
+&none    &none     &none      &none   &none        &none     &kp PIPE   &kp SQT            &none      &none       &none   &none
+                              &none   &kp COMMA    &none     &none      &none
+                                      &none        &none     &none
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        dvorak_deadstate {
-            if-layers = <7>;
-            then-layer = <7>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
