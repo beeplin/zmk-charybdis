@@ -228,7 +228,7 @@
         d_at_l0: d_at_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(RIGHT_BRACKET) &to 0>;
+            bindings = <&kp RIGHT_BRACKET &to 0>;
             label = "D_AT_L0";
         };
     };
