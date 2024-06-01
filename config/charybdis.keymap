@@ -238,6 +238,34 @@
             bindings = <&kp LBKT &to 0>;
             label = "D_SLASH_L0";
         };
+
+        n_lbkt_l0: n_lbkt_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &to 0>;
+            label = "N_LBKT_L0";
+        };
+
+        n_rbkt_l0: n_rbkt_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT &to 0>;
+            label = "N_RBKT_L0";
+        };
+
+        n_lbrc_l0: n_brc_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &to 0>;
+            label = "N_BRC_L0";
+        };
+
+        n_rbrc_l0: n_rbrc_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC &to 0>;
+            label = "N_RBRC_L0";
+        };
     };
 
     keymap {
@@ -311,10 +339,10 @@
 
         Dvorak_DeadState {
             bindings = <
-&to 0      &none  &none        &none  &none          &none    &none        &none        &none        &none         &none            &none
-&n_esc_l0  &none  &n_tilde_l0  &none  &d_hash_l0     &none    &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &d_slash_l0      &n_backslash_l0
-&to 0      &none  &none        &none  &d_percent_l0  &none    &d_amps_l0   &d_dqt_l0    &d_at_l0     &none         &n_backslash_l0  &none
-&none      &none  &none        &none  &none          &none    &n_pipe_l0   &none        &none        &none         &none            &mo 4
+&to 0      &none        &none  &none  &none          &none    &none        &none        &none        &none         &none            &none
+&n_esc_l0  &n_tilde_l0  &none  &none  &d_hash_l0     &none    &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &d_slash_l0      &n_backslash_l0
+&to 0      &none        &none  &none  &d_percent_l0  &none    &d_amps_l0   &d_dqt_l0    &d_at_l0     &none         &n_backslash_l0  &none
+&none      &none        &none  &none  &none          &none    &n_pipe_l0   &none        &none        &none         &none            &mo 4
                                &to 0  &n_space_l0    &to 7    &to 0        &to 0
                                       &none          &none    &to 0
             >;
@@ -322,23 +350,23 @@
 
         Normal_DeadState {
             bindings = <
-&to 0      &to 0  &to 0        &to 0  &none          &none    &none       &none        &none        &none        &none            &none
-&n_esc_l0  &none  &n_tilde_l0  &none  &n_hash_l0     &none    &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
-&none      &none  &none        &none  &n_percent_l0  &none    &n_amps_l0  &n_dqt_l0    &n_at_l0     &none        &n_backslash_l0  &none
-&none      &none  &none        &none  &none          &none    &n_pipe_l0  &none        &none        &none        &none            &mo 4
-                               &to 0  &n_space_l0    &to 0    &to 0       &none
-                                      &to 0          &none    &none
+&to 0      &to 0        &to 0       &to 0  &none          &none    &none       &none        &none        &none        &none            &none
+&n_esc_l0  &n_tilde_l0  &none       &none  &n_hash_l0     &none    &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
+&none      &n_lbkt_l0   &n_lbrc_l0  &none  &n_percent_l0  &none    &n_amps_l0  &n_dqt_l0    &n_at_l0     &none        &n_backslash_l0  &none
+&none      &n_rbkt_l0   &n_rbrc_l0  &none  &none          &none    &n_pipe_l0  &none        &none        &none        &none            &mo 4
+                                    &to 0  &n_space_l0    &to 0    &to 0       &none
+                                           &to 0          &none    &none
             >;
         };
 
         DeadStatePreview {
             bindings = <
-&to 0    &kp AMPS  &kp N7     &kp N5  &kp N3       &kp N1    &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
-&kp ESC  &none     &kp TILDE  &none   &kp HASH     &none     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp SLASH      &kp BACKSLASH
-&none    &none     &none      &none   &kp PERCENT  &none     &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &none       &kp BACKSLASH  &none
-&none    &none     &none      &none   &none        &none     &kp PIPE   &kp SQT            &none      &none       &none          &mo 4
-                              &to 0   &kp COMMA    &to 0     &none      &none
-                                      &none        &none     &none
+&to 0    &kp AMPS   &kp N7       &kp N5        &kp N3       &kp N1       &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
+&kp ESC  &kp TILDE  &kp KP_PLUS  &kp KP_MINUS  &kp HASH     &none        &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp SLASH      &kp BACKSLASH
+&none    &kp LBKT   &kp LBRC     &kp LPAR      &kp PERCENT  &kp EQUAL    &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &kp STAR    &kp BACKSLASH  &none
+&none    &kp RBKT   &kp RBRC     &kp RPAR      &none        &none        &kp PIPE   &kp SQT            &none      &none       &none          &mo 4
+                                 &to 0         &kp COMMA    &to 0        &none      &none
+                                               &none        &none        &none
             >;
         };
 
