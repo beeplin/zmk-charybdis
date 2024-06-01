@@ -266,6 +266,90 @@
             bindings = <&kp RBRC &to 0>;
             label = "N_RBRC_L0";
         };
+
+        n_lpar_l0: n_lpar_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &to 0>;
+            label = "N_LPAR_L0";
+        };
+
+        n_rpar_l0: n_rpar_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR &to 0>;
+            label = "N_RPAR_L0";
+        };
+
+        n_plus_l0: n_plus_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_PLUS &to 0>;
+            label = "N_PLUS_L0";
+        };
+
+        n_minus_l0: n_mine_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MINUS &to 0>;
+            label = "N_MINE_L0";
+        };
+
+        n_star_l0: n_star_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp STAR &to 0>;
+            label = "N_STAR_L0";
+        };
+
+        d_star_l0: d_star_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N7 &to 0>;
+            label = "D_STAR_L0";
+        };
+
+        d_lbkt_l0: d_lpkt_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &to 0>;
+            label = "D_LPKT_L0";
+        };
+
+        d_rbkt_l0: d_rpkt_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &to 0>;
+            label = "D_RPKT_L0";
+        };
+
+        d_lbrc_l0: d_lbrc_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &to 0>;
+            label = "D_LBRC_L0";
+        };
+
+        d_rbrc_l0: d_rbrc_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N4 &to 0>;
+            label = "D_RBRC_L0";
+        };
+
+        d_lpar_l0: d_lpar_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N5 &to 0>;
+            label = "D_LPAR_L0";
+        };
+
+        d_rpar_l0: d_rpar_l0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N7 &to 0>;
+            label = "D_RPAR_L0";
+        };
     };
 
     keymap {
@@ -339,34 +423,34 @@
 
         Dvorak_DeadState {
             bindings = <
-&to 0      &none        &none  &none  &none          &none    &none        &none        &none        &none         &none            &none
-&n_esc_l0  &n_tilde_l0  &none  &none  &d_hash_l0     &none    &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &d_slash_l0      &n_backslash_l0
-&to 0      &none        &none  &none  &d_percent_l0  &none    &d_amps_l0   &d_dqt_l0    &d_at_l0     &none         &n_backslash_l0  &none
-&none      &none        &none  &none  &none          &none    &n_pipe_l0   &none        &none        &none         &none            &mo 4
-                               &to 0  &n_space_l0    &to 7    &to 0        &to 0
-                                      &none          &none    &to 0
+&to 0      &none        &none       &none        &none          &none    &none        &none        &none        &none         &none            &none
+&n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &d_hash_l0     &none    &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &d_slash_l0      &n_backslash_l0
+&to 0      &d_lbkt_l0   &d_lbrc_l0  &d_lpar_l0   &d_percent_l0  &none    &d_amps_l0   &d_dqt_l0    &d_at_l0     &d_star_l0    &n_backslash_l0  &none
+&none      &d_rbkt_l0   &d_rbrc_l0  &n_rpar_l0   &none          &none    &n_pipe_l0   &none        &none        &none         &none            &mo 4
+                                    &to 0        &n_space_l0    &to 7    &to 0        &to 0
+                                                 &none          &none    &to 0
             >;
         };
 
         Normal_DeadState {
             bindings = <
-&to 0      &to 0        &to 0       &to 0  &none          &none    &none       &none        &none        &none        &none            &none
-&n_esc_l0  &n_tilde_l0  &none       &none  &n_hash_l0     &none    &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
-&none      &n_lbkt_l0   &n_lbrc_l0  &none  &n_percent_l0  &none    &n_amps_l0  &n_dqt_l0    &n_at_l0     &none        &n_backslash_l0  &none
-&none      &n_rbkt_l0   &n_rbrc_l0  &none  &none          &none    &n_pipe_l0  &none        &none        &none        &none            &mo 4
-                                    &to 0  &n_space_l0    &to 0    &to 0       &none
-                                           &to 0          &none    &none
+&to 0      &to 0        &to 0       &to 0        &none          &none    &none       &none        &none        &none        &none            &none
+&n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &n_hash_l0     &none    &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
+&none      &n_lbkt_l0   &n_lbrc_l0  &n_lpar_l0   &n_percent_l0  &none    &n_amps_l0  &n_dqt_l0    &n_at_l0     &n_star_l0   &n_backslash_l0  &none
+&none      &n_rbkt_l0   &n_rbrc_l0  &n_rpar_l0   &none          &none    &n_pipe_l0  &none        &none        &none        &none            &mo 4
+                                    &to 0        &n_space_l0    &to 0    &to 0       &none
+                                                 &to 0          &none    &none
             >;
         };
 
         DeadStatePreview {
             bindings = <
-&to 0    &kp AMPS   &kp N7       &kp N5        &kp N3       &kp N1       &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
-&kp ESC  &kp TILDE  &kp KP_PLUS  &kp KP_MINUS  &kp HASH     &none        &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp SLASH      &kp BACKSLASH
-&none    &kp LBKT   &kp LBRC     &kp LPAR      &kp PERCENT  &kp EQUAL    &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &kp STAR    &kp BACKSLASH  &none
-&none    &kp RBKT   &kp RBRC     &kp RPAR      &none        &none        &kp PIPE   &kp SQT            &none      &none       &none          &mo 4
-                                 &to 0         &kp COMMA    &to 0        &none      &none
-                                               &none        &none        &none
+&to 0    &kp AMPS   &kp N7    &kp N5     &kp N3       &kp N1       &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
+&kp ESC  &kp TILDE  &kp PLUS  &kp MINUS  &kp HASH     &none        &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp SLASH      &kp BACKSLASH
+&none    &kp LBKT   &kp LBRC  &kp LPAR   &kp PERCENT  &kp EQUAL    &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &kp STAR    &kp BACKSLASH  &none
+&none    &kp RBKT   &kp RBRC  &kp RPAR   &none        &kp UNDER    &kp PIPE   &kp SQT            &none      &none       &none          &mo 4
+                              &to 0      &kp SPACE    &to 0        &none      &none
+                                         &none        &none        &none
             >;
         };
 
