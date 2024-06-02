@@ -459,7 +459,7 @@
 &to 0      &none        &none       &none        &none          &none          &none        &none        &none        &none         &none            &none
 &n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &d_hash_l0     &d_excl_l0     &d_grave_l0  &d_caret_l0  &d_colon_l0  &d_dollar_l0  &n_backslash_l0  &n_backslash_l0
 &to 0      &d_lbkt_l0   &d_lbrc_l0  &d_lpar_l0   &d_percent_l0  &d_equl_l0     &d_amps_l0   &d_dqt_l0    &d_at_l0     &n_star_l0    &n_slash_l0      &none
-&none      &d_rbkt_l0   &d_rbrc_l0  &n_rpar_l0   &none          &n_under_l0    &n_pipe_l0   &none        &none        &none         &none            &mo 4
+&none      &d_rbkt_l0   &d_rbrc_l0  &n_rpar_l0   &none          &d_under_l0    &n_pipe_l0   &none        &none        &none         &none            &mo 4
                                     &to 0        &n_space_l0    &to 7          &to 0        &to 0
                                                  &none          &none          &to 0
             >;
@@ -470,7 +470,7 @@
 &to 0      &to 0        &to 0       &to 0        &none          &none          &none       &none        &none        &none        &none            &none
 &n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &n_hash_l0     &n_excl_l0     &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
 &none      &n_lbkt_l0   &n_lbrc_l0  &n_lpar_l0   &n_percent_l0  &n_equl_l0     &n_amps_l0  &n_dqt_l0    &n_at_l0     &n_star_l0   &n_slash_l0      &none
-&none      &n_rbkt_l0   &n_rbrc_l0  &n_rpar_l0   &none          &d_under_l0    &n_pipe_l0  &none        &none        &none        &none            &mo 4
+&none      &n_rbkt_l0   &n_rbrc_l0  &n_rpar_l0   &none          &n_under_l0    &n_pipe_l0  &none        &none        &none        &none            &mo 4
                                     &to 0        &n_space_l0    &to 0          &to 0       &none
                                                  &to 0          &none          &none
             >;
