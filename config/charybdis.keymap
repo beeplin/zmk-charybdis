@@ -202,18 +202,18 @@
             label = "N_ESC_L0";
         };
 
-        d_hash_l0: d_equal_l0 {
+        d_hash_l0: d_hash_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &to 0>;
-            label = "D_EQUAL_L0";
+            label = "D_HASH_L0";
         };
 
-        n_hash_l0: n_equal_l0 {
+        n_hash_l0: n_hash_l0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp HASH &to 0>;
-            label = "N_EQUAL_L0";
+            label = "N_HASH_L0";
         };
 
         n_at_l0: n_at_l0 {
