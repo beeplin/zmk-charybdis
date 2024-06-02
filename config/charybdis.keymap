@@ -45,6 +45,11 @@
             bindings = <&kp RIGHT>;
             key-positions = <44 45>;
         };
+
+        combo_capture_screen {
+            bindings = <&kp LS(LC(LG(N4)))>;
+            key-positions = <13 14 15>;
+        };
     };
 
     behaviors {
