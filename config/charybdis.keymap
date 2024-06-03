@@ -394,7 +394,7 @@
 &kp TAB         &kp Q       &kp W       &kp E         &kp R             &kp T     &kp Y      &kp U              &kp I                &kp O           &kp P               &kp LEFT_BRACKET
 &kp LCTRL       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G     &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z     &lt 5 X     &kp C         &kp V             &kp B     &kp N      &kp M              &kp COMMA            &kp PERIOD      &lt 3 SLASH         &mo 4
-                                        &kp LEFT_GUI  &kp SPACE         &sl 6     &kp ENTER  &kp BACKSPACE
+                                        &kp LEFT_GUI  &kp SPACE         &sl 9     &kp ENTER  &kp BACKSPACE
                                                       &kp LEFT_ALT      &mo 1     &to 2
             >;
         };
@@ -417,7 +417,7 @@
 &kp C_PLAY_PAUSE  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none     &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_MUTE
 &kp LS(C_NEXT)    &none     &none         &none           &none            &none     &none   &none            &none              &none         &none          &kp C_VOL_DN
                                           &to 0           &to 0            &to 0     &trans  &none
-                                                          &trans           &trans    &to 9
+                                                          &trans           &trans    &to 0
             >;
         };
 
@@ -454,36 +454,25 @@
             >;
         };
 
-        Dvorak_DeadState {
+        DeadState {
             bindings = <
-&to 0      &none        &none       &none        &none          &none          &none        &none        &none        &none       &none            &none
-&n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &d_hash_l0     &d_excl_l0     &d_grave_l0  &d_caret_l0  &d_colon_l0  &kp GRAVE   &n_backslash_l0  &n_backslash_l0
-&to 0      &d_lbkt_l0   &d_lbrc_l0  &d_lpar_l0   &d_percent_l0  &d_equl_l0     &d_amps_l0   &d_dqt_l0    &d_at_l0     &n_star_l0  &n_slash_l0      &none
-&none      &d_rbkt_l0   &d_rbrc_l0  &n_rpar_l0   &none          &d_under_l0    &n_pipe_l0   &none        &none        &none       &none            &mo 4
-                                    &to 0        &n_space_l0    &sl 8          &to 0        &to 0
-                                                 &none          &none          &to 0
-            >;
-        };
-
-        Normal_DeadState {
-            bindings = <
-&to 0      &to 0        &to 0       &to 0        &none          &none          &none       &none        &none        &none        &none            &none
-&n_esc_l0  &n_tilde_l0  &n_plus_l0  &n_minus_l0  &n_hash_l0     &n_excl_l0     &n_grave_0  &n_caret_l0  &n_colon_l0  &n_dollar_0  &n_backslash_l0  &n_backslash_l0
-&none      &n_lbkt_l0   &n_lbrc_l0  &n_lpar_l0   &n_percent_l0  &n_equl_l0     &n_amps_l0  &n_dqt_l0    &n_at_l0     &n_star_l0   &n_slash_l0      &none
-&none      &n_rbkt_l0   &n_rbrc_l0  &n_rpar_l0   &none          &n_under_l0    &n_pipe_l0  &none        &none        &none        &none            &mo 4
-                                    &to 0        &n_space_l0    &to 0          &to 0       &none
-                                                 &to 0          &none          &none
-            >;
-        };
-
-        DeadStatePreview {
-            bindings = <
-&to 0    &kp AMPS   &kp N7    &kp N5     &kp N3       &kp N1       &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
-&kp ESC  &kp TILDE  &kp PLUS  &kp MINUS  &kp HASH     &kp EXCL     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp BACKSLASH  &kp BACKSLASH
+&kp ESC  &kp AMPS   &kp N7    &kp N5     &kp N3       &kp N1       &kp N9     &kp N0             &kp N2     &kp N4      &kp N6         &kp N8
+&none    &kp TILDE  &kp PLUS  &kp MINUS  &kp HASH     &kp EXCL     &kp GRAVE  &kp CARET          &kp COLON  &kp DOLLAR  &kp BACKSLASH  &kp BACKSLASH
 &none    &kp LBKT   &kp LBRC  &kp LPAR   &kp PERCENT  &kp EQUAL    &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &kp STAR    &kp SLASH      &none
 &none    &kp RBKT   &kp RBRC  &kp RPAR   &none        &kp UNDER    &kp PIPE   &kp SQT            &none      &none       &none          &mo 4
-                              &to 0      &kp SPACE    &to 0        &none      &none
-                                         &none        &none        &none
+                              &to 0      &kp SPACE    &to 0        &kp ENTER  &kp BACKSPACE
+                                         &to 0        &to 0        &to 0
+            >;
+        };
+
+        Dvorak_DeadState {
+            bindings = <
+&kp ESC  &none       &none        &none         &none          &none          &none        &none        &none        &none            &none          &none
+&none    &kp TILDE   &kp KP_PLUS  &kp KP_MINUS  &d_hash_l0     &d_excl_l0     &d_grave_l0  &d_caret_l0  &d_colon_l0  &kp GRAVE        &kp BACKSLASH  &kp BACKSLASH
+&none    &d_lbkt_l0  &d_lbrc_l0   &d_lpar_l0    &d_percent_l0  &d_equl_l0     &d_amps_l0   &d_dqt_l0    &d_at_l0     &kp KP_MULTIPLY  &kp SLASH      &none
+&none    &d_rbkt_l0  &d_rbrc_l0   &d_rpar_l0    &none          &d_under_l0    &kp PIPE     &none        &none        &none            &none          &mo 4
+                                  &to 0         &kp SPACE      &sl 6          &to 0        &to 0
+                                                &to 0          &to 0          &to 0
             >;
         };
 
@@ -493,7 +482,7 @@
 &none  &kp ESC  &kp C_PLAY_PAUSE  &kp C_PREV         &kp C_NEXT       &kp UNDER       &kp KP_MINUS  &kp KP_N7      &kp KP_N8  &kp KP_N9  &kp BACKSPACE  &none
 &none  &kp TAB  &none             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp KP_EQUAL    &kp KP_PLUS   &kp KP_N4      &kp KP_N5  &kp KP_N6  &kp ENTER      &none
 &none  &none    &none             &none              &none            &kp KP_DOT      &kp KP_N0     &kp KP_N1      &kp KP_N2  &kp KP_N3  &to 0          &none
-                                  &to 0              &kp LEFT_GUI     &to 0           &kp LEFT_ALT  &kp BACKSPACE
+                                  &kp LEFT_GUI       &to 0            &to 0           &kp LEFT_ALT  &kp BACKSPACE
                                                      &none            &none           &to 2
             >;
         };
