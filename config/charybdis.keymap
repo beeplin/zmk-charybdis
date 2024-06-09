@@ -149,7 +149,7 @@
 &kp ESC  &none       &none         &none   &none      &none          &none     &none         &none         &none            &none          &none
 &none    &kp TILDE   &kp KP_PLUS   &kp N3  &kp N4     &kp MINUS      &kp PLUS  &kp LS(RBKT)  &kp LS(Q)     &kp GRAVE        &kp BACKSLASH  &kp BACKSLASH
 &none    &kp LS(N1)  &kp KP_MINUS  &kp N5  &kp N8     &kp LS(N1)     &kp N1    &kp LS(Z)     &kp RBKT      &kp KP_MULTIPLY  &kp SLASH      &none
-&none    &d_rbkt_l0  &kp EQUAL     &kp N2  &kp N0     &kp LS(SQT)    &kp PIPE  &kp Z         &kp LS(LBKT)  &none            &none          &mo 4
+&none    &none       &kp EQUAL     &kp N2  &kp N0     &kp LS(SQT)    &kp PIPE  &kp Z         &kp LS(LBKT)  &none            &none          &mo 4
                                    &to 0   &kp SPACE  &sl 6          &to 0     &to 0
                                            &to 0      &to 0          &to 0
             >;
