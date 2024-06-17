@@ -135,23 +135,23 @@
 
         DeadState {
             bindings = <
-&kp ESC  &kp AMPS   &kp N7     &kp N5          &kp N3           &kp N1       &kp N9     &kp N0             &kp N2        &kp N4      &kp N6         &kp N8
-&none    &kp TILDE  &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EXCL     &kp GRAVE  &kp CARET          &kp COLON     &kp DOLLAR  &kp BACKSLASH  &kp BACKSLASH
-&none    &kp PRCNT  &kp MINUS  &kp LPAR        &kp RPAR         &kp AMPS     &kp EQUAL  &kp DOUBLE_QUOTES  &kp AT        &kp STAR    &kp SLASH      &none
-&none    &none      &kp HASH   &kp LBKT        &kp RBKT         &kp UNDER    &kp PIPE   &kp SQT            &kp QUESTION  &none       &none          &mo 4
-                               &to 0           &kp SPACE        &to 0        &kp ENTER  &kp BACKSPACE
-                                               &to 0            &to 0        &to 0
+&kp ESC  &none      &none     &none           &none            &none         &none      &none              &none         &none       &none          &none
+&none    &kp AMPS   &kp LBKT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LPAR      &kp EQUAL  &kp STAR           &kp RPAR      &kp PLUS    &kp RBKT       &kp BACKSLASH
+&none    &kp TILDE  &kp AT    &kp LT          &kp GT           &kp MINUS     &kp GRAVE  &kp DOUBLE_QUOTES  &kp COLON     &kp DOLLAR  &kp BACKSLASH  &none
+&none    &kp PRCNT  &kp HASH  &none           &none            &kp UNDER     &kp PIPE   &kp EXCL           &kp QUESTION  &kp CARET   &kp SLASH      &mo 4
+                              &to 0           &kp SPACE        &sk LSHIFT    &kp TAB    &kp BACKSPACE
+                                              &to 0            &to 0         &to 0
             >;
         };
 
         Dvorak_DeadState {
             bindings = <
-&kp ESC  &none       &none         &none   &none      &none          &none     &none         &none         &none            &none          &none
-&none    &kp TILDE   &kp KP_PLUS   &kp N3  &kp N4     &kp MINUS      &kp PLUS  &kp LS(RBKT)  &kp LS(Q)     &kp GRAVE        &kp BACKSLASH  &kp BACKSLASH
-&none    &kp LS(N1)  &kp KP_MINUS  &kp N5  &kp N8     &kp N1         &kp N6    &kp LS(Z)     &kp RBKT      &kp KP_MULTIPLY  &kp LBKT       &none
-&none    &none       &kp EQUAL     &kp N2  &kp N0     &kp LS(SQT)    &kp PIPE  &kp Z         &kp LS(LBKT)  &none            &none          &mo 4
-                                   &to 0   &kp SPACE  &sl 6          &to 0     &to 0
-                                           &to 0      &to 0          &to 0
+&kp ESC  &none       &none      &none      &none      &none             &none     &none          &none         &none         &none          &none
+&none    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5            &kp N6    &kp N7         &kp N8        &kp N9        &kp N0         &kp BACKSLASH
+&none    &kp TILDE   &kp RBKT   &kp LS(W)  &kp LS(E)  &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp BACKSLASH  &none
+&none    &kp LS(N1)  &kp EQUAL  &none      &none      &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT       &mo 4
+                                &to 0      &kp SPACE  &sk LEFT_SHIFT    &kp TAB   &kp BACKSPACE
+                                           &to 0      &to 0             &to 0
             >;
         };
 
