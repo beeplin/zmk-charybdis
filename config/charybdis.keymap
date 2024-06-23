@@ -102,16 +102,16 @@
 
         layer_2 {
             bindings = <
-&kp F11           &kp F1    &kp F2        &kp F3          &kp F4           &kp F5    &kp F6  &kp F7           &kp F8             &kp F9        &kp F10        &kp F12
-&kp C_PREV        &none     &none         &kp KP_MINUS    &kp KP_PLUS      &none     &none   &none            &none              &none         &none          &kp C_VOL_UP
-&kp C_PLAY_PAUSE  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none     &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_MUTE
-&kp LS(C_NEXT)    &none     &none         &none           &none            &none     &none   &none            &none              &none         &none          &kp C_VOL_DN
-                                          &to 0           &to 0            &to 0     &trans  &none
-                                                          &trans           &trans    &to 8
+&kp F11           &kp F1    &kp F2        &kp F3          &kp F4           &kp F5     &kp F6     &kp F7           &kp F8             &kp F9        &kp F10        &kp F12
+&kp C_PREV        &none     &none         &kp KP_MINUS    &kp KP_PLUS      &none      &none      &kp HOME         &kp END            &kp TAB       &none          &kp C_VOL_UP
+&kp C_PLAY_PAUSE  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB    &none      &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_MUTE
+&kp LS(C_NEXT)    &none     &none         &none           &none            &none      &none      &none            &none              &none         &none          &kp C_VOL_DN
+                                          &to 0           &kp SPACE        &to 0      &kp ENTER  &to 0
+                                                          &trans           &trans     &to 8
             >;
         };
 
-        Mouse {
+        fun_layer {
             bindings = <
 &none         &none         &none         &none              &none         &none                    &none              &none            &none   &none   &none  &none
 &kp TAB       &kp GRAVE     &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &out OUT_TOG             &kp F10            &kp F7           &kp F8  &kp F9  &none  &kp F12
@@ -168,12 +168,12 @@
 
         Num {
             bindings = <
-&none  &none    &none             &none              &none            &none           &none         &none          &none      &none      &none          &none
-&none  &kp ESC  &kp C_PLAY_PAUSE  &kp C_PREV         &kp C_NEXT       &kp UNDER       &kp KP_MINUS  &kp KP_N7      &kp KP_N8  &kp KP_N9  &kp BACKSPACE  &none
-&none  &kp TAB  &none             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp KP_EQUAL    &kp KP_PLUS   &kp KP_N4      &kp KP_N5  &kp KP_N6  &kp ENTER      &none
-&none  &none    &none             &none              &none            &kp KP_DOT      &kp KP_N0     &kp KP_N1      &kp KP_N2  &kp KP_N3  &to 0          &none
-                                  &kp LEFT_GUI       &to 0            &to 0           &kp LEFT_ALT  &kp BACKSPACE
-                                                     &none            &none           &to 2
+&none  &none     &none         &none         &none      &none    &none         &none          &none      &none      &none         &none
+&none  &none     &none         &none         &none      &none    &kp KP_MINUS  &kp KP_N7      &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &none
+&none  &kp LEFT  &kp UP_ARROW  &kp DOWN      &kp RIGHT  &none    &kp KP_SLASH  &kp KP_N4      &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &none
+&none  &none     &none         &none         &none      &none    &kp KP_DOT    &kp KP_N1      &kp KP_N2  &kp KP_N3  &to 0         &none
+                               &kp LEFT_GUI  &kp SPACE  &to 0    &kp KP_N0     &kp BACKSPACE
+                                             &none      &none    &to 2
             >;
         };
     };
