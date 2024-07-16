@@ -64,12 +64,7 @@
 
         combo_tog3 {
             bindings = <&tog 3>;
-            key-positions = <35 34>;
-        };
-
-        combo_tog3_2 {
-            bindings = <&tog 3>;
-            key-positions = <36 37>;
+            key-positions = <10 11>;
         };
     };
 
@@ -83,6 +78,14 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <100>;
         };
+
+        super_bspc: super_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -94,7 +97,7 @@
 &kp TAB         &kp Q       &kp W       &kp E         &kp R             &kp T     &kp Y      &kp U              &kp I                &kp O           &kp P               &kp LEFT_BRACKET
 &kp LCTRL       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G     &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z     &lt 5 X     &kp C         &kp V             &kp B     &kp N      &kp M              &kp COMMA            &kp PERIOD      &lt 3 SLASH         &mo 4
-                                        &kp LEFT_GUI  &kp SPACE         &sl 7     &kp ENTER  &kp BACKSPACE
+                                        &kp LEFT_GUI  &kp SPACE         &sl 7     &kp ENTER  &super_bspc
                                                       &kp LEFT_ALT      &mo 1     &to 2
             >;
         };
