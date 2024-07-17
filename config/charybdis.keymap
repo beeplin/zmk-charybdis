@@ -98,7 +98,7 @@
 &kp LCTRL       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G     &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &kp LEFT_SHIFT  &lt 3 Z     &lt 5 X     &kp C         &kp V             &kp B     &kp N      &kp M              &kp COMMA            &kp PERIOD      &lt 3 SLASH         &mo 4
                                         &kp LEFT_GUI  &kp SPACE         &sl 7     &kp ENTER  &super_bspc
-                                                      &kp LEFT_ALT      &mo 1     &to 2
+                                                      &kp LEFT_ALT      &mo 1     &sl 2
             >;
         };
 
