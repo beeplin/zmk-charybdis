@@ -86,6 +86,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        grave_escape: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            bindings = <&kp ESC>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -93,12 +103,12 @@
 
         Base {
             bindings = <
-&gresc          &kp N1      &kp N2      &kp N3        &kp N4            &kp N5    &kp N6     &kp N7             &kp N8               &kp N9          &kp N0              &kp MINUS
-&kp TAB         &kp Q       &kp W       &kp E         &kp R             &kp T     &kp Y      &kp U              &kp I                &kp O           &kp P               &kp LEFT_BRACKET
-&kp LCTRL       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G     &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
-&kp LEFT_SHIFT  &lt 3 Z     &lt 5 X     &kp C         &kp V             &kp B     &kp N      &kp M              &kp COMMA            &kp PERIOD      &lt 3 SLASH         &mo 4
-                                        &kp LEFT_GUI  &kp SPACE         &sl 7     &kp ENTER  &super_bspc
-                                                      &kp LEFT_ALT      &mo 1     &sl 2
+&grave_escape   &kp N1      &kp N2      &kp N3        &kp N4            &kp N5    &kp N6       &kp N7             &kp N8               &kp N9          &kp N0              &kp MINUS
+&kp TAB         &kp Q       &kp W       &kp E         &kp R             &kp T     &kp Y        &kp U              &kp I                &kp O           &kp P               &kp LEFT_BRACKET
+&kp LCTRL       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G     &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z       &lt 5 X     &kp C         &kp V             &kp B     &kp N        &kp M              &kp COMMA            &kp PERIOD      &lt 3 SLASH         &mo 4
+                                        &kp LEFT_GUI  &kp SPACE         &sl 7     &kp ENTER    &super_bspc
+                                                      &kp LEFT_ALT      &mo 1     &lt 2 RIGHT
             >;
         };
 
