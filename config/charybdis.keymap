@@ -125,11 +125,11 @@
 
         layer_2 {
             bindings = <
-&kp F11           &kp F1    &kp F2        &kp F3          &kp F4           &kp F5     &kp F6     &kp F7           &kp F8             &kp F9        &kp F10        &kp F12
-&kp C_PREV        &none     &none         &kp KP_MINUS    &kp KP_PLUS      &none      &none      &kp HOME         &kp END            &kp TAB       &none          &kp C_VOL_UP
-&kp C_PLAY_PAUSE  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB    &none      &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_MUTE
-&kp LS(C_NEXT)    &none     &none         &none           &none            &none      &none      &none            &none              &none         &none          &kp C_VOL_DN
-                                          &to 0           &kp SPACE        &to 0      &kp ENTER  &to 0
+&kp F11           &kp F1    &kp F2        &kp F3          &kp F4           &kp F5     &kp F6    &kp F7           &kp F8             &kp F9        &kp F10        &kp F12
+&kp C_PREV        &none     &none         &kp KP_MINUS    &kp KP_PLUS      &none      &none     &kp HOME         &kp END            &kp TAB       &none          &kp C_VOL_UP
+&kp C_PLAY_PAUSE  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB    &none     &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_MUTE
+&kp LS(C_NEXT)    &none     &none         &none           &none            &none      &none     &none            &none              &none         &none          &kp C_VOL_DN
+                                          &to 0           &kp SPACE        &to 0      &kp LEFT  &kp RIGHT
                                                           &trans           &trans     &none
             >;
         };
