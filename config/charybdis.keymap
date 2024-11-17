@@ -66,6 +66,11 @@
             bindings = <&tog 3>;
             key-positions = <10 11>;
         };
+
+        comob_boot {
+            bindings = <&bootloader>;
+            key-positions = <23 35 47>;
+        };
     };
 
     behaviors {
@@ -129,7 +134,7 @@
 &kp C_PREV        &kp LS(N1)  &kp LS(N2)    &kp LS(N3)      &kp LS(N4)       &kp LS(N5)    &kp LS(N6)  &kp LS(N7)       &kp LS(N8)         &kp LS(N9)    &kp LS(N0)     &kp LS(MINUS)
 &kp C_PLAY_PAUSE  &kp LEFT    &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TAB       &none       &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_WIN  &kp C_VOL_UP
 &kp LS(C_NEXT)    &none       &none         &none           &none            &none         &none       &none            &none              &none         &kp C_MUTE     &kp C_VOL_DN
-                                            &to 0           &kp SPACE        &to 0         &kp LEFT    &kp RIGHT
+                                            &mkp RCLK       &mkp LCLK        &mkp MCLK     &kp LEFT    &kp RIGHT
                                                             &trans           &trans        &none
             >;
         };
