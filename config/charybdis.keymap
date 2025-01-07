@@ -17,23 +17,20 @@
 
 / {
     behaviors {
-        lsk: layer_sticky_key      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&sk>; };
-        lsl: layer_sticky_layer    { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&sl>; };
-        lmk: layer_mouse_key       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&mkp>; };
-        lcw: layer_caps_word       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&caps_word>; };
-        hsk: hold_sticky_key       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&sk>; };
-        hsl: hold_sticky_layer     { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&sl>; };
-        hmk: hold_mouse_key        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&mkp>; };
-        hcw: hold_caps_word        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&caps_word>; };
-        m_lclk_lmove: m_lclk_lmove { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL)>; bindings = <&mkp LCLK>, <&mmv MOVE_LEFT>; };
-        m_mclk_dmove: m_mclk_dmove { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL)>; bindings = <&mkp MCLK>, <&mmv MOVE_DOWN>; };
-        m_rclk_rmove: m_rclk_rmove { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LCTL)>; bindings = <&mkp RCLK>, <&mmv MOVE_RIGHT>; };
+        lsk: layer_sticky_key      { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "lsk"; bindings = <&mo>, <&sk>; };
+        lsl: layer_sticky_layer    { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "lsl"; bindings = <&mo>, <&sl>; };
+        lmk: layer_mouse_key       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "lmk"; bindings = <&mo>, <&mkp>; };
+        lcw: layer_caps_word       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "lcw"; bindings = <&mo>, <&caps_word>; };
+        hsk: hold_sticky_key       { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "hsk"; bindings = <&kp>, <&sk>; };
+        hsl: hold_sticky_layer     { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "hsl"; bindings = <&kp>, <&sl>; };
+        hmk: hold_mouse_key        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "hmk"; bindings = <&kp>, <&mkp>; };
+        hcw: hold_caps_word        { compatible = "zmk,behavior-hold-tap";  #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; label = "hcw"; bindings = <&kp>, <&caps_word>; };
     };
 
     keymap {
         compatible = "zmk,keymap";
         layer0 {
-            label = "COLMAK";
+            display-name = "COLMAK";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &kp Q            &kp W            &kp F            &kp P            &kp B                                                               &kp J            &kp L            &kp U            &kp Y            &kp SEMI
@@ -42,7 +39,7 @@
                                                    &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer1 {
-            label = "QWERTY";
+            display-name = "QWERTY";
             trackball- = <&tmv_coarse>;
             bindings = <
                  &kp Q            &kp W            &kp E            &kp R            &kp T                                                               &kp Y            &kp U            &kp I            &kp O            &kp P
@@ -51,7 +48,7 @@
                                                    &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer2 {
-            label = "NAVNUM";
+            display-name = "NAVNUM";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &hsk LALT LALT   &kp BSPC         &kp UP           &kp TAB          &kp DEL                                                             &kp INS          &kp N7           &kp N8           &kp N9           &kp LALT
@@ -60,7 +57,7 @@
                                                    &none            &none            &none                                                               &hcw LSHFT CAPS  &kp N0 >;
         };
         layer3 {
-            label = "SYMBOL";
+            display-name = "SYMBOL";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &kp EXCL         &kp AT           &kp POUND        &kp DLLR         &kp PRCNT                                                           &kp CARET        &kp AMPS         &kp ASTRK        &kp PIPE         &kp BSLH
@@ -69,7 +66,7 @@
                                                    &kp K_APP        &kp MINUS        &kp PLUS                                                            &none            &none >;
         };
         layer4 {
-            label = "FUNMSE";
+            display-name = "FUNMSE";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &hsk LALT LALT   &kp F9           &kp F8           &kp F7           &kp F12                                                             &kp C_MUTE       &mkp MB4         &mkp MB5         &none            &none
@@ -78,7 +75,7 @@
                                                    &none            &none            &none                                                               &mo 7            &none >;
         };
         layer5 {
-            label = "SCROLL";
+            display-name = "SCROLL";
             trackball-bindings = <&tsl>;
             bindings = <
                  &trans           &trans           &trans           &trans           &trans                                                              &trans           &trans           &trans           &trans           &trans
@@ -87,7 +84,7 @@
                                                    &trans           &trans           &trans                                                              &trans           &trans >;
         };
         layer6 {
-            label = "SNIPER";
+            display-name = "SNIPER";
             trackball-bindings = <&tmv_fine>;
             bindings = <
                  &trans           &trans           &trans           &trans           &trans                                                              &trans           &trans           &trans           &trans           &trans
@@ -96,7 +93,7 @@
                                                    &trans           &trans           &trans                                                              &trans           &trans >;
         };
         layer7 {
-            label = "CONFIG";
+            display-name = "CONFIG";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                                        &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR 
