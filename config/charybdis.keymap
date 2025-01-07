@@ -39,7 +39,7 @@
                  &kp Q            &kp W            &kp F            &kp P            &kp B                                                               &kp J            &kp L            &kp U            &kp Y            &kp SEMI
                  &kp A            &kp R            &kp S            &kp T            &kp G                                                               &kp M            &kp N            &kp E            &kp I            &kp O
                  &kp Z            &kp X            &kp C            &kp D            &kp V                                                               &kp K            &kp H            &kp COMMA        &kp DOT          &kp FSLH
-                                                   &kp LGUI         &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
+                                                   &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer1 {
             display-name = "QWERTY";
@@ -48,7 +48,7 @@
                  &kp Q            &kp W            &kp E            &kp R            &kp T                                                               &kp Y            &kp U            &kp I            &kp O            &kp P
                  &kp A            &kp S            &kp D            &kp F            &kp G                                                               &kp H            &kp J            &kp K            &kp L            &kp SEMI
                  &kp Z            &kp X            &kp C            &kp V            &kp B                                                               &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH
-                                                   &kp LGUI         &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
+                                                   &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer2 {
             display-name = "NAVNUM";
@@ -100,8 +100,8 @@
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                                        &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR 
-                 &none            &bt BT_PRV       &bt BT_CLR       &bt BT_NXT       &out OUT_TOG                                                        &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF 
-                 &bt BT_DISC 0    &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3    &bt BT_DISC 4                                                       &rgb_ug RGB_TOG  &to 0            &to 1            &none            &none
+                 &bt BT_DISC 0    &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3    &bt BT_DISC 4                                                       &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF 
+                 &bt BT_CLR       &none            &none            &none            &out OUT_TOG                                                        &rgb_ug RGB_TOG  &to 0            &to 1            &none            &none
                                                    &none            &bootloader      &none                                                               &none            &bootloader >;
         };
     };
