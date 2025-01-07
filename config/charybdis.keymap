@@ -30,7 +30,7 @@
     keymap {
         compatible = "zmk,keymap";
         layer0 {
-            display-name = "COLMAK";
+            label = "COLMAK";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &kp Q            &kp W            &kp F            &kp P            &kp B                                                               &kp J            &kp L            &kp U            &kp Y            &kp SEMI
@@ -39,7 +39,7 @@
                                                    &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer1 {
-            display-name = "QWERTY";
+            label = "QWERTY";
             trackball- = <&tmv_coarse>;
             bindings = <
                  &kp Q            &kp W            &kp E            &kp R            &kp T                                                               &kp Y            &kp U            &kp I            &kp O            &kp P
@@ -48,7 +48,7 @@
                                                    &hsk LGUI LALT   &lt 2 LCTRL      &lt 4 ESC                                                           &kp SPACE        &lsk 3 LSHFT >;
         };
         layer2 {
-            display-name = "NAVNUM";
+            label = "NAVNUM";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &hsk LALT LALT   &kp BSPC         &kp UP           &kp TAB          &kp DEL                                                             &kp INS          &kp N7           &kp N8           &kp N9           &kp LALT
@@ -57,7 +57,7 @@
                                                    &none            &none            &none                                                               &hcw LSHFT CAPS  &kp N0 >;
         };
         layer3 {
-            display-name = "SYMBOL";
+            label = "SYMBOL";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &kp EXCL         &kp AT           &kp POUND        &kp DLLR         &kp PRCNT                                                           &kp CARET        &kp AMPS         &kp ASTRK        &kp PIPE         &kp BSLH
@@ -66,7 +66,7 @@
                                                    &kp K_APP        &kp MINUS        &kp PLUS                                                            &none            &none >;
         };
         layer4 {
-            display-name = "FUNMSE";
+            label = "FUNMSE";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &hsk LALT LALT   &kp F9           &kp F8           &kp F7           &kp F12                                                             &kp C_MUTE       &mkp MB4         &mkp MB5         &none            &none
@@ -75,7 +75,7 @@
                                                    &none            &none            &none                                                               &mo 7            &none >;
         };
         layer5 {
-            display-name = "SCROLL";
+            label = "SCROLL";
             trackball-bindings = <&tsl>;
             bindings = <
                  &trans           &trans           &trans           &trans           &trans                                                              &trans           &trans           &trans           &trans           &trans
@@ -84,7 +84,7 @@
                                                    &trans           &trans           &trans                                                              &trans           &trans >;
         };
         layer6 {
-            display-name = "SNIPER";
+            label = "SNIPER";
             trackball-bindings = <&tmv_fine>;
             bindings = <
                  &trans           &trans           &trans           &trans           &trans                                                              &trans           &trans           &trans           &trans           &trans
@@ -93,7 +93,7 @@
                                                    &trans           &trans           &trans                                                              &trans           &trans >;
         };
         layer7 {
-            display-name = "CONFIG";
+            label = "CONFIG";
             trackball-bindings = <&tmv_coarse>;
             bindings = <
                  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                                        &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR 
