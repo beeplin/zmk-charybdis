@@ -7,7 +7,7 @@
     };
 
     vbatt: vbatt {
-	compatible = "zmk,battery-nrf-vddh";
+	    compatible = "zmk,battery-nrf-vddh";
     };
 
     charybdis_physical_layout: charybdis_physical_layout {
@@ -90,7 +90,6 @@
 							                RC(4,5) RC(4,2)                   RC(4,11)
         >;
     };
-
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
