@@ -21,8 +21,9 @@
         shift_ctrl     { bindings = <&kp LS(LCTRL)>;    key-positions = <49 50>; };
         mo3            { bindings = <&mo 3>;            key-positions = <49 52>; };
         shift_gui      { bindings = <&kp LS(LGUI)>;     key-positions = <49 53>; };
-        ctrl_shift_alt { bindings = <&kp LC(LS(LALT))>; key-positions = <49 50 53 54>; };
-        capsword       { bindings = <&caps_word>;       key-positions = <52 51>; };
+        shift_ctrl_gui { bindings = <&kp LS(LC(LGUI))>; key-positions = <49 50 53 54>; };
+        shift_ctrl_2   { bindings = <&kp LS(LCTRL)>;    key-positions = <52 51>; };
+        shift_ctrl_alt { bindings = <&kp LS(LC(LALT))>; key-positions = <52 51 55>; };
     }; 
     keymap {
         compatible = "zmk,keymap";
@@ -31,8 +32,8 @@
 &kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &kp LPAR
 &kp LCTRL           &kp I               &kp A               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp O               &kp SQT
 &kp LSHFT           &kp Y               &kp X               &kp D               &kp R               &kp C                   &kp M               &kp N               &kp J               &kp DOT             &kp FSLH            &kp BSLH
-                                                            &kp LALT            &lt 2 SPACE         &kp LCTRL               &kp LSHFT           &ls 2 RSHIFT
-                                                                                &kp LWIN            &kp LALT                &kp RIGHT >; };
+                                                            &kp LALT            &lt 2 SPACE         &kp LCTRL               &kp RCTRL           &ls 2 RSHIFT
+                                                                                &kp LGUI            &kp LSHFT               &kp LALT >; };
         layer_1 { bindings = < 
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
