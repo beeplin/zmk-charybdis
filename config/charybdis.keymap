@@ -32,7 +32,7 @@
 &kp LCTRL           &kp I               &kp A               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp O               &kp SQT
 &kp LSHFT           &kp Y               &kp X               &kp D               &kp R               &kp C                   &kp M               &kp N               &kp J               &kp DOT             &kp FSLH            &kp BSLH
                                                             &kp LALT            &lt 2 SPACE         &kp LCTRL               &kp LSHFT           &ls 2 RSHIFT
-                                                                                &kp LWIN            &kp LALT                &kp RCTRL >; };
+                                                                                &kp LWIN            &kp LALT                &kp RIGHT >; };
         layer_1 { bindings = < 
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
