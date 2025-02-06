@@ -32,7 +32,7 @@
 &kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &kp LPAR
 &kp LCTRL           &kp I               &kp A               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp O               &kp SQT
 &kp LSHFT           &kp Y               &kp X               &kp D               &kp R               &kp C                   &kp M               &kp N               &kp J               &kp DOT             &kp FSLH            &kp BSLH
-                                                            &kp LALT            &lt 2 SPACE         &kp LCTRL               &kp RCTRL           &ls 2 RSHIFT
+                                                            &kp LALT            &lt 2 SPACE         &kp LCTRL               &mc RCTRL CAPS      &ls 2 RSHIFT
                                                                                 &kp LGUI            &kp LSHFT               &kp LALT >; };
         layer_1 { bindings = < 
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
