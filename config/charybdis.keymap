@@ -13,6 +13,10 @@
     behaviors {
         ls: layer_sticky { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&mo>, <&sk>; };
         mc: mod_capsword { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "hold-preferred"; tapping-term-ms = <200>; bindings = <&kp>, <&caps_word>; };
+        pars: pars { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LPAR>, <&kp RPAR>;};
+        brcs: brcs { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LBRC>, <&kp RBRC>;};
+        bkts: bkts { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; mods = <(MOD_LSFT|MOD_RSFT)>; bindings = <&kp LBKT>, <&kp RBKT>;};
+        
     };
     combos {
         compatible = "zmk,combos";
@@ -28,8 +32,8 @@
     keymap {
         compatible = "zmk,keymap";
         layer_0 { bindings = <
-&kp CARET           &kp PLUS            &kp MINUS           &kp EQUAL           &kp UNDER           &kp GRAVE               &kp POUND           &kp ASTRK           &kp LBRC            &kp LBKT            &kp PRCNT           &kp DLLR
-&kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &kp LPAR
+&kp CARET           &kp PLUS            &kp MINUS           &kp EQUAL           &kp UNDER           &kp GRAVE               &kp POUND           &kp ASTRK           &brcs               &bkts               &kp PRCNT           &kp DLLR
+&kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &pars
 &kp LCTRL           &kp I               &kp A               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp O               &kp SQT
 &kp LSHFT           &kp Y               &kp X               &kp D               &kp R               &kp C                   &kp M               &kp N               &kp J               &kp DOT             &kp FSLH            &kp BSLH
                                                             &kp LALT            &lt 2 SPACE         &kp LCTRL               &mc RCTRL CAPS      &ls 2 RSHIFT
