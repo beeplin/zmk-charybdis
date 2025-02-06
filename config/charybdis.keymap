@@ -24,7 +24,7 @@
 &kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &kp LPAR
 &kp LCTRL           &kp I               &kp A               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp O               &kp SQT
 &kp LSHFT           &kp Y               &kp X               &kp D               &kp R               &kp C                   &kp M               &kp N               &kp J               &kp DOT             &kp FSLH            &kp BSLH
-                                                            &kp LALT            &lt 2 SPACE         &kp LSHFT               &kp RSHFT           &ls 3 RSHIFT
+                                                            &kp LALT            &lt 2 SPACE         &kp LSHFT               &kp RSHFT           &ls 4 RSHIFT
                                                                                 &mo 3               &kp LWIN                &kp RWIN >; };
         layer_1 { bindings = <
 &trans              &trans              &trans              &trans              &trans              &trans                  &trans              &trans              &trans              &trans              &trans              &trans
