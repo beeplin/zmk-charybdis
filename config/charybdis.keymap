@@ -54,4 +54,5 @@
 &trans              &kp TILDE           &kp BSLH            &kp PIPE            &kp LBKT            &kp RBKT                &kp PLUS            &kp UNDER           &kp LT              &kp GT              &kp QMARK           &trans
                                                             &trans              &trans              &trans                  &trans              &trans
                                                                                 &trans              &trans                  &trans >; };
+    };
 };
