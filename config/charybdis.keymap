@@ -37,7 +37,7 @@
 &kp CARET           &kp PLUS            &kp MINUS           &kp EQUAL           &kp UNDER           &kp GRAVE               &kp POUND           &kp ASTRK           &brcs               &bkts               &kp PRCNT           &kp DLLR
 &kp TAB             &kp P               &kp V               &kp U               &kp Z               &kp W                   &kp Q               &kp COMMA           &kp K               &kp B               &kp SEMI            &pars
 &kp LCTRL           &kp A               &kp O               &kp S               &kp T               &kp G                   &kp F               &kp H               &kp E               &kp L               &kp I               &kp SQT
-&kp LSHFT           &kp Y               &kp X               &kp D               &kp C               &kp R                   &kp N               &kp Mn              &kp J               &kp DOT             &kp FSLH            &kp BSLH
+&kp LSHFT           &kp Y               &kp X               &kp D               &kp C               &kp R                   &kp N               &kp M               &kp J               &kp DOT             &kp FSLH            &kp BSLH
                                                             &kp LALT            &lt 2 SPACE         &kp LCTRL               &mc RCTRL CAPS      &ls 2 RSHIFT
                                                                                 &kp LGUI            &kp LSHFT               &kp LALT >; };
         layer_1 { bindings = < 
@@ -50,8 +50,8 @@
         layer_2 { bindings = <
 &kp F11             &kp F12             &kp F2              &kp F3              &kp F4              &kp F5                  &kp F6              &kp F7              &kp F8              &kp F9              &kp F10             &kp K_APP
 &kp LALT            &kp F1              &kp BSPC            &kp UP              &kp PG_UP           &kp HOME                &kp AMPS            &kp N7              &kp N8              &kp N9              &kp AT              &kp LALT
-&kp LCTRL           &kp ESC             &kp LEFT            &kp ENTER           &kp RIGHT           &kp INS                 &kp EXCL            &kp N1              &kp N2              &kp N3              &kp N0              &kp RCTRL
-&kp LSHFT           &kp END             &kp CAPS            &kp DOWN            &kp PG_DN           &kp DEL                 &kp PIPE            &kp N4              &kp N5              &kp N6              &kp TILDE           &kp RSHFT
+&kp LCTRL           &kp ESC             &kp LEFT            &kp ENTER           &kp RIGHT           &kp CAPS                &kp EXCL            &kp N1              &kp N2              &kp N3              &kp N0              &kp RCTRL
+&kp LSHFT           &kp END             &kp INS             &kp DOWN            &kp PG_DN           &kp DEL                 &kp PIPE            &kp N4              &kp N5              &kp N6              &kp TILDE           &kp RSHFT
                                                             &trans              &kp LSHIFT          &trans                  &trans              &kp RSHIFT
                                                                                 &trans              &trans                  &trans >; };
         layer_3 { bindings = <
